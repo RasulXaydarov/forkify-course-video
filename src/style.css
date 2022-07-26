@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.btn-page {
+  cursor: pointer;
+  color: #f38e82;
+  background-color: #f9f5f3;
+  flex-basis: 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  margin: 0 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.btn-page:hover {
+  color: #f48982;
+  background-color: #f2efee;
+}
+
+span {
+  margin-right: 5px;
+}
