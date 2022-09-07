@@ -111,22 +111,6 @@ class PaginationView extends View {
           `<a href="#" data-goto="${pageNum}" class="btn-page btn--inline">${pageNum}</a>`
       )
       .join('');
-
-    /*  <button class="btn--inline pagination__btn--prev">
-    <svg class="search__icon">
-      <use href="src/img/icons.svg#icon-arrow-left"></use>
-    </svg>
-    <span>Page 1</span>
-  </button>
-  <a href="#" class="btn--inline btn-page">2</a><a href="#" class="btn-page">3</a
-  ><a href="#" class="btn--inline btn-page">4</a><span>...</span
-  ><a href="#" class="btn--inline btn-page last-page">6</a>
-  <button class="btn--inline pagination__btn--next">
-    <span>Page 3</span>
-    <svg class="search__icon">
-      <use href="src/img/icons.svg#icon-arrow-right"></use>
-    </svg>
-  </button>*/
   }
 }
 
