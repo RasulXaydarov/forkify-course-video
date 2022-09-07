@@ -1,8 +1,12 @@
-.pagination {
+.pagination-container {
   display: flex;
-  align-items: center;
-}
+  margin-left: auto;
 
+  gap: 3px;
+}
+.container-page--1 {
+  margin-left: 9.4rem;
+}
 .btn-page {
   cursor: pointer;
   color: #f38e82;
@@ -14,7 +18,7 @@
   margin: 0 5px;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100px;
 }
 .btn-page:hover {
   color: #f48982;

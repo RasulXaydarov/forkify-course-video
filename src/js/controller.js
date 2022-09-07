@@ -62,6 +62,22 @@ const controlPagination = function (goToPage) {
 
   // 2) Render NEW pagination buttons
   paginationView.render(model.state.search);
+
+  // Pagination's pages
+  // 1) get all number of pages
+  // 2) render page buttons
+
+  // Get all number of pages
+  // 1) save each page number in paginationView
+  // 2)find all page numbers
+
+  // Write code for pagination in the controller
+  // Render page buttons
+  // 1) Write in the controller numbers and take them from model
+  // 2)Write numbers in the pagination in order to render buttons
+  // 3)Add link to the page
+
+  console.log(paginationView._generateMarkup());
 };
 
 const controlServings = function (newServings) {
