@@ -10,6 +10,8 @@ import addRecipeView from './views/addRecipeView.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
+const inputs = document.querySelectorAll('input');
+
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -120,6 +122,37 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError(err.message);
   }
 };
+const inputSourceUrl = document.getElementById('sourceUrl');
+
+inputSourceUrl.addEventListener('change', function (e) {
+  // const isValid = e.target.checkValidity();
+  // console.log(isValid);
+
+  // isValid checks validity of the text
+  const isValid = e.target.reportValidity();
+  console.log(isValid);
+  // Adds aria-invalid attribute to the element when the text is invalid
+  e.target.setAttribute('aria-invalid', !isValid);
+
+  inputs.forEach(input => {
+    const errorElement = document.createElement('span');
+    console.log(errorElement);
+ 
+    errorElement.id = `${input.id}-error`;
+    input.setAttribute('aria-describedby', errorElement.id);
+    input.insertAdjacentElement(errorElement);
+    inputSourceUrl.addEventListener('change', function (e) {
+      const isInvalid = !e.target.checkValidity();
+      e.target.setAttribute('aria-invalid', isInvalid);
+      if (isInvalid) {
+        const errorMessage = e.target.validationMessage;
+        errorElement.textContent = errorMessage;
+        console.log(errorMessage);
+      }
+    });
+  });
+  //
+});
 
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);

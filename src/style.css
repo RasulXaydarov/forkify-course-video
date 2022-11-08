@@ -7,6 +7,17 @@
 .container-page--1 {
   margin-left: 9.4rem;
 }
+
+.form-input:valid {
+  border: 2px solid #37b24d;
+}
+
+.form-input:invalid {
+  border: 2px solid #f03e3e;
+}
+.form-input:invalid:required {
+  background-color: #ff6b6b;
+}
 .btn-page {
   cursor: pointer;
   color: #f38e82;
